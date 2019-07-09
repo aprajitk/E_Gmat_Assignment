@@ -1,22 +1,30 @@
-<div class="grid-container">
+<div class="grid-container" (keypress)="numericOnly($event)">
   <div class="grid-item">
-    <div>Quant</div>
+    <div class="a">Quant</div>
+    <br>
     <div>
-      <label for="Current">Current </label>
-        <input type="text">
-      <label for="Target">Target </label>
-        <input type="text">
+      <label for="Current">Current  </label>
+        <input type="text" name="Quant_Current" onchange="this.value=this.value ? Math.max(Math.min(this.value,60),0) : null"  >
+      <label for="Target">Target  </label>
+        <input type="text" name="Quant_Target" onchange="this.value=this.value ? Math.max(Math.min(this.value,60),0) : null">
     </div>
   </div>
   <div class="grid-item">
-    <div>Verbal</div>
+    <div class="a">Verbal</div>
+    <br>
     <div>
-      <label for="Current">Current </label>
-        <input type="text">
-      <label for="Target">Target </label>
-        <input type="text">
+      <label for="Current">Current  </label>
+        <input type="text" name="Verbal_Current" onchange="this.value=this.value ? Math.max(Math.min(this.value,60),0) : null">
+      <label for="Target">Target  </label>
+        <input type="text" name="Verbal_Target" onchange="this.value=this.value ? Math.max(Math.min(this.value,60),0) : null">
     </div>
   </div>
 </div>
 <br>
-<button id="button">Submit and refresh</button>
+<button id="button" (click)="submit_refresh()">Submit and refresh</button>
+<br>
+<br>
+<div *ngIf="score_details">
+<app-bar-graphs-ui [score_data]="score_details" ></app-bar-graphs-ui>
+</div>
+

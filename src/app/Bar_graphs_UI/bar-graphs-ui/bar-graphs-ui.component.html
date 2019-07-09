@@ -1,3 +1,42 @@
-<p>
-  bar-graphs-ui works!
-</p>
+<div id="screen">
+<div id="total">
+<div class="b">Total Score</div>
+<br>
+<div class="b">{{Total_current_score}}</div>
+<br>
+<div id="Base_Line">
+  <div class="Current_Score" id="Current_Score"></div>
+      <span class="tooltiptext_top" [ngStyle]="{'left':Current_Score.style.width}">{{Total_current_score}}</span>
+  <div class="Target_Score" id="Target_Score"><div id="diff">+{{diff_total_score}}</div></div>
+      <span class="tooltiptext_bottom" [ngStyle]="{'left':Target_Score.style.width}">{{Total_target_score}}</span>
+</div>
+</div>
+<br><br>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="c"> Quant Score</div>
+    <br>
+    <div class="b">Q{{score_data.Quant_Current}}</div>
+    <br><br>
+    <div class="Base_Line">
+        <div class="Current_Score" id="Q_Current_Score"></div>
+        <span class="tooltiptext_top" [ngStyle]="{'left':Q_Current_Score.style.width}">{{score_data.Quant_Current}}</span>
+        <div class="Target_Score" id="Q_Target_Score">+{{diff_quant_score}}</div>
+        <span class="tooltiptext_bottom" [ngStyle]="{'left':Q_Target_Score.style.width}">{{score_data.Quant_Target}}</span>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="c"> Verbal Score</div>
+    <br>
+    <div class="b">V{{score_data.Verbal_Current}}</div>
+    <br><br>
+    <div class="Base_Line">
+        <div class="Current_Score" id="V_Current_Score"></div>
+        <span class="tooltiptext_top" [ngStyle]="{'left':V_Current_Score.style.width}">{{score_data.Verbal_Current}}</span>
+        <div class="Target_Score" id="V_Target_Score">+{{diff_verbal_score}}</div>
+        <span class="tooltiptext_bottom" [ngStyle]="{'left':V_Target_Score.style.width}">{{score_data.Verbal_Target}}</span>
+    </div>
+  </div>
+</div>
+</div>
+
