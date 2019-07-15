@@ -7,8 +7,12 @@
     background: #f5f5f5;
     padding: 10px;
 }
+#V_Current_Score, #Q_Current_Score, #Current_Score, #V_Target_Score, #Q_Target_Score, #Target_Score{
+  transition: width 5s;
+  transition-timing-function: linear;
+}
 #Base_Line {
-    width: 800px;
+    width: 85%;
     background-color:#f5f5f5;
     position:relative;
     height: 15px;
@@ -25,23 +29,30 @@
     height: 15px;
     background-color: #ffe28a;
     border-radius: 0 20px 20px 0;
+  }
+
+  .diff{
     color: black;
-    /* text-align: right; */
-    /* transform: translateX(20vw); */
+    height: 15px;
+    /* transform: translateX(60%); */
     font-size: 70%;
+    position: absolute;
   }
   .tooltiptext_top{
     color: grey;
     position: absolute;
     z-index: 1;
     bottom: 120%;
-    margin-left: -30px;
+    height: 25px;
+    margin-left: -14px;
   }
   .tooltiptext_top::after {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 70%;
+    left: 40%;
     border-style: solid;
+    border-top-width: 10px;
     border-color: #0fa2eb transparent transparent transparent;
   }
   .tooltiptext_bottom{
@@ -49,13 +60,16 @@
     position: absolute;
     z-index: 1;
     bottom: 120%;
-    margin-left: -30px;
+    height: 25px;
+    margin-left: -14px;
   }
   .tooltiptext_bottom::after {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 70%;
+    left: 40%;
     border-style: solid;
+    border-top-width: 10px;
     border-color: #ffe28a transparent transparent transparent;
   }
   .Base_Line {
